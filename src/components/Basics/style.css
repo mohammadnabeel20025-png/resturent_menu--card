@@ -1,0 +1,196 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f6fa;
+    color: #222;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-group__item {
+    padding: 12px 25px;
+    border: 2px solid #ff9800;
+    border-radius: 30px;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-group__item:hover {
+    background: #ff9800;
+    color: #141e30;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+}
+
+/* MAIN CARD CONTAINER */
+
+.main-card--container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1250px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* CARD */
+
+.card-container {
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* CARD BODY */
+
+.card-body {
+    padding: 25px;
+}
+
+.card-number {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+    margin-right: 12px;
+    text-transform: capitalize;
+}
+
+.card-circle {
+    background: #fff0d9;
+    color: #e67e00;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+}
+
+.card-title {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 18px 0 12px;
+    color: #202a38;
+}
+
+.card-description {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.7;
+}
+
+.card-read {
+    display: inline-block;
+    margin-top: 20px;
+    color: #f28c00;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* CARD IMAGE */
+
+.card-media {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-media {
+    transform: scale(1.05);
+}
+
+/* ORDER NOW TAG */
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff9800;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .main-card--container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-card--container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .navbar {
+        padding: 20px 10px;
+    }
+
+    .btn-group {
+        gap: 10px;
+    }
+
+    .btn-group__item {
+        padding: 10px 17px;
+        font-size: 13px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+}
